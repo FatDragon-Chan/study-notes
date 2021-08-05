@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "npm run dev:h5",
+    "dev": "  cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch",
     "build": "npm run build:h5",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
     "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
@@ -57,6 +58,8 @@
     "@dcloudio/uni-quickapp-native": "^2.0.0-31920210709003",
     "@dcloudio/uni-quickapp-webview": "^2.0.0-31920210709003",
     "@dcloudio/uni-stat": "^2.0.0-31920210709003",
+    "@lx-frontend/uniapp-custom-component-register-plugin": "^1.0.4",
+    "@lx-frontend/uniapp-global-components-register-plugin": "^1.0.2",
     "@vue/shared": "^3.0.0",
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",

@@ -1,27 +1,35 @@
 <template>
 	<view class="content">
-        <image class="logo" src="../../static/logo.png"></image>
-		<view>
-            <text class="title">{{title}}</text>
-        </view>
+    <view>
+      <Search />
+    </view>
+    <view>
+      <button @click="gotoContent">点我进入内容页</button>
+    </view>
 	</view>
 </template>
 
 <script lang="ts">
-    import Vue from 'vue';
-	export default Vue.extend({
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
-	});
+import Vue from 'vue';
+import Search from '@/components/search/search.vue'
+export default Vue.extend({
+  components: {
+    Search
+  },
+  data() {
+    return {
+      title: 'Index'
+    }
+  },
+  onLoad() {},
+  methods: {
+    gotoContent() {
+      uni.navigateTo({
+        url: '/pages/content/index'
+      })
+    }
+  }
+});
 </script>
 
 <style>
@@ -30,21 +38,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin: 200rpx auto 50rpx auto;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+    min-height: 100vh;
 	}
 </style>

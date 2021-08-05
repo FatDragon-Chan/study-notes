@@ -5,6 +5,32 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path": "pages/content/index",
+			"style": {
+				"navigationBarTitleText": "详情页"
+			}
+		}
+	],
+	"subPackages": [
+		{
+			"root": "pages/subs",
+			"pages": [{
+				"path": "test"
+			}]
+		},
+		{
+			"root": "pages/subs2",
+			"pages": [{
+				"path": "test"
+			}]
+		},
+		{
+			"root": "pages/subs3",
+			"pages": [{
+				"path": "test"
+			}]
 		}
 	],
 	"globalStyle": {
